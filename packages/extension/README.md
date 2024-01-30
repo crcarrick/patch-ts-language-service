@@ -6,7 +6,9 @@ VSCode extension that allows users to plug-in and patch the internals of VSCode'
 
 ```json
 {
-  "crcarrick.patchTsLanguageService.scriptPath": "/path/to/script.js"
+  "crcarrick.patchTsLanguageService": {
+    "scriptPath": "/path/to/script.js"
+  }
 }
 ```
 
@@ -32,9 +34,11 @@ module.exports = {
 
 You can install the `patch-ts-language-service-types` package and get typescript intellisense support when writing your patched `LanguageService` API.
 
-```console
+```bash
 npm add -D patch-ts-language-service-types
+# or
 pnpm add -D patch-ts-language-service-types
+# or
 yarn add -D patch-ts-language-service-types
 ```
 
@@ -54,7 +58,7 @@ const patchedService: PatchedLanguageService = {
 export = patchedService
 ```
 
-**IMPORTANT** The typescript patch file must be compile to javascript before providing the path to the file in the extension settings. Providing a path directly to a typescript file _will not work_.
+**IMPORTANT** The typescript patch file must be compiled to javascript before providing the path to the file in the extension settings. Providing a path directly to a typescript file _will not work_.
 
 For a working example, see [here](https://github.com/crcarrick/patch-ts-language-service/tree/main/example).
 
