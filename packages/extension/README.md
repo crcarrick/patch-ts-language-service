@@ -54,6 +54,8 @@ const patchedService: PatchedLanguageService = {
 export = patchedService
 ```
 
+You'll need to compile the typescript file to javascript in some way before providing the path to the file in the extension settings.
+
 For a working example, see [here](https://github.com/crcarrick/patch-ts-language-service/tree/main/example).
 
 ## Release Notes
