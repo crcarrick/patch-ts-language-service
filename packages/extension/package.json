@@ -1,7 +1,8 @@
 {
   "name": "patch-ts-language-service",
   "displayName": "patch-ts-language-service",
-  "description": "",
+  "description": "Extension to allow easy patching of the TypeScript language service",
+  "repository": "https://github.com/crcarrick/patch-ts-language-service.git",
   "version": "0.0.1",
   "author": {
     "name": "Chris Carrick",
