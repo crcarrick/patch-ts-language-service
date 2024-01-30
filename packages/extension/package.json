@@ -43,8 +43,8 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm esbuild:base --minify",
-    "esbuild:dev": "npm esbuild:base --sourcemap --watch",
+    "vscode:prepublish": "npm run esbuild:base --minify",
+    "esbuild:dev": "npm run esbuild:base --sourcemap --watch",
     "esbuild:base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
