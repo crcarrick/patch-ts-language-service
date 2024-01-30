@@ -1,0 +1,66 @@
+{
+  "name": "patch-ts-language-service",
+  "displayName": "patch-ts-language-service",
+  "description": "",
+  "version": "0.0.1",
+  "author": {
+    "name": "Chris Carrick",
+    "email": "chris@crcarrick.dev"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/*.*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "typescriptServerPlugins": [
+      {
+        "name": "plugin-patch-ts-language-service",
+        "enableForWorkspaceTypeScriptVersions": true
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Patch TS Language Service",
+      "properties": {
+        "crcarrick.patchTsLanguageService": {
+          "type": "object",
+          "description": "Patch TS Language Service configuration",
+          "properties": {
+            "scriptPath": {
+              "type": "string",
+              "description": "An **absolute** path to the script that contains the functions to patch the TS language service"
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "triple-beam": "^1.4.1",
+    "typescript": "^5.3.3",
+    "winston": "^3.11.0",
+    "winston-transport": "^4.6.0",
+    "plugin-patch-ts-language-service": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/triple-beam": "^1.3.5",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
