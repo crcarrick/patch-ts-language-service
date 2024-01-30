@@ -24,6 +24,12 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
 
+  example:
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   packages/extension:
     dependencies:
       plugin-patch-ts-language-service:

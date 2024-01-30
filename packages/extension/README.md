@@ -50,8 +50,11 @@ const patchedService: PatchedLanguageService = {
   },
 }
 
-export default patchedService
+// export default will work as well
+export = patchedService
 ```
+
+For a working example, see [here](https://github.com/crcarrick/patch-ts-language-service/tree/main/example).
 
 ## Release Notes
 
