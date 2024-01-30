@@ -2,8 +2,9 @@
   "name": "patch-ts-language-service-repo",
   "version": "0.0.0",
   "scripts": {
-    "compile": "pnpm --filter ./packages/plugin run compile && pnpm --filter ./packages/extension run compile"
+    "compile": "npm run compile --workspace=extension && npm run compile --workspace=plugin"
   },
+  "packageManager": "npm@10.2.4",
   "devDependencies": {
     "@types/node": "20.x",
     "@typescript-eslint/eslint-plugin": "^6.15.0",

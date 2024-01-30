@@ -6,11 +6,12 @@
     "name": "Chris Carrick",
     "email": "chris@crcarrick.dev"
   },
+  "packageManager": "npm@10.2.4",
   "main": "out/index.js",
   "scripts": {
     "compile": "tsc",
     "lint": "eslint src --ext ts",
-    "prepublish": "pnpm compile",
+    "prepublish": "npm compile",
     "watch": "tsc -watch"
   },
   "dependencies": {

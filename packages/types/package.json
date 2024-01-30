@@ -2,9 +2,13 @@
   "name": "patch-ts-language-service-types",
   "version": "1.0.0",
   "description": "Types for the Patch TS Language Service extension API",
+  "author": {
+    "name": "Chris Carrick",
+    "email": "chris@crcarrick.dev"
+  },
   "types": "index.d.ts",
   "keywords": [],
-  "author": "",
+  "packageManager": "npm@10.2.4",
   "license": "ISC",
   "dependencies": {
     "typescript": "^5.3.3",
