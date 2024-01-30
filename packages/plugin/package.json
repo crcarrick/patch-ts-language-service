@@ -1,6 +1,6 @@
 {
   "name": "plugin-patch-ts-language-service",
-  "description": "",
+  "description": "Typescript language service plugin used alongside the patch-ts-language-service VS Code extension",
   "version": "0.0.1",
   "author": {
     "name": "Chris Carrick",

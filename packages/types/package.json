@@ -1,7 +1,7 @@
 {
   "name": "patch-ts-language-service-types",
   "version": "1.0.0",
-  "description": "",
+  "description": "Types for the Patch TS Language Service extension API",
   "types": "index.d.ts",
   "keywords": [],
   "author": "",
